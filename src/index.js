@@ -25,7 +25,9 @@ function initializeCode() {
 
   // Remove all comments from the list
   removeCommentsButton.addEventListener("click", function () {
-    window.confirm("Are you sure you want to remove all comments?");
-    list.innerHTML = "";
+    var res = window.confirm("Are you sure you want to remove all comments?");
+    if (res == true) {
+      list.innerHTML = "";
+    }
   });
 }
