@@ -17,7 +17,8 @@ function initializeCode() {
   var hwTag = document.getElementsByTagName("h1")[0]; //returns an array!
   var addCommentButton = document.getElementById("add-comment");
   //var removeCommentsButton = document.getElementById("remove-comments");
-  var list = document.getElementById("add-data");
+  //var list = document.getElementById("add-data");
+  var list = document.getElementsByTagName("ul")[0]; //returns an array!
 
   // Print Hello World to console
   printToConsole.addEventListener("click", function () {
