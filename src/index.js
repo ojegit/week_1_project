@@ -13,9 +13,17 @@ if (document.readyState !== "loading") {
 }
 
 function initializeCode() {
+  var printToConsole = document.getElementById("my-button");
+  var hwTag = document.getElementsByTagName("h1")[0]; //returns an array!
   var addCommentButton = document.getElementById("add-comment");
-  var removeCommentsButton = document.getElementById("remove-comments");
-  var list = document.getElementById("list");
+  //var removeCommentsButton = document.getElementById("remove-comments");
+  var list = document.getElementById("add-data");
+
+  // Print Hello World to console
+  printToConsole.addEventListener("click", function () {
+    console.log("Hello World!");
+    hwTag.innerHTML = "My notebook";
+  });
 
   // Add comment from the textarea to the list
   addCommentButton.addEventListener("click", function () {
@@ -24,10 +32,10 @@ function initializeCode() {
   });
 
   // Remove all comments from the list
-  removeCommentsButton.addEventListener("click", function () {
-    var res = window.confirm("Are you sure you want to remove all comments?");
-    if (res == true) {
-      list.innerHTML = "";
-    }
-  });
+  //removeCommentsButton.addEventListener("click", function () {
+  //  var res = window.confirm("Are you sure you want to remove all comments?");
+  //  if (res == true) {
+  //    list.innerHTML = "";
+  //  }
+  //});
 }
