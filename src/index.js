@@ -28,7 +28,11 @@ function initializeCode() {
   // Add comment from the textarea to the list
   addCommentButton.addEventListener("click", function () {
     var textAreaValue = document.getElementById("comment-area").value;
-    list.innerHTML += "<li>" + textAreaValue + "</li>";
+    var tag = document.createElement("li");
+    var text = document.createTextNode(textAreaValue); //must create a node to add text
+    tag.appendChild(text);
+    list.appendChild(tag); //put the text inside the <li> tag
+    //list.innerHTML += "<li>" + textAreaValue + "</li>";
   });
 
   // Remove all comments from the list
