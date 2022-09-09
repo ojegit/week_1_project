@@ -15,7 +15,7 @@ if (document.readyState !== "loading") {
 function initializeCode() {
   var printToConsole = document.getElementById("my-button");
   var hwTag = document.getElementsByTagName("h1")[0]; //returns an array!
-  var addCommentButton = document.getElementById("add-comment");
+  var addCommentButton = document.getElementById("add-data");
   //var removeCommentsButton = document.getElementById("remove-comments");
   //var list = document.getElementById("add-data");
   var list = document.getElementsByTagName("ul")[0]; //returns an array!
